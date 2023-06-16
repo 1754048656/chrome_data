@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="applicable-device" content="pc">
+    <meta name="mobile-agent" content="format=xhtml;url=https://m.bohe.cn/ask/">
+    <link type="image/x-icon" href="//static.bohe.cn/favicon.ico" rel="shortcut icon">
+    <link rel="alternate" media="only screen and(max-width: 640px)" id="toM" href="https://m.bohe.cn/ask/">
+    <link rel="stylesheet" href="https://static.bohe.cn/video/pc/home/css/base.inc.css?v=20220916">
+    <link rel="stylesheet" href="https://static.bohe.cn/video/pc/css/base.inc.css">
+    <link rel="stylesheet" href="https://static.bohe.cn/css/common/common.css?v1">
+    <link rel="stylesheet" href="https://static.bohe.cn/indexnew/pc/css/base.inc.css?v=1112">
+    <meta name="keywords" content="在线问答,权威专家,健康问答,健康咨询,专家咨询,疾病咨询">
+    <meta name="description" content="博禾医生在线问答频道由经过认证的三甲医院权威专家本人提供专业的在线问答服务，及时、准确、权威、专业地帮助网友解决健康与疾病问题">
+    <title>在线问答，权威医患问答平台 - 问答频道 - 博禾医生</title>
+    <script src="https://static.bohe.cn/js/common/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://static.bohe.cn/video/pc/js/share.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://static.bohe.cn/js/common/clamp.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://static.bohe.cn/video/pc/iask_pc/css/index.css?v=223"/>
+
+
+    <textarea style="display:none" id="fh-host">
+        {
+            "HOST_PASSPORT":"//passport.fh21.com.cn"
+        }
+    </textarea>
+    <style>
+        /*.footer-code{*/
+            /*width: 372px;*/
+        /*}*/
+        /*.footer-subnav{*/
+            /*margin-right: 0;*/
+            /*width: 827px;*/
+        /*}*/
+        .select-more{
+            display: inline-block;
+        }
+        .search-btn{
+            width: 16px;
+            height: 16px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .search-box .icon-search{
+            display: block;
+        }
+        .sl .sl-list{
+            width: 880px;
+        }
+        .icon-list-btn{
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -20px;
+            margin-top: -20px;
+            background: url('https://static.bohe.cn/video/pc/images/icon-list-btn.png') no-repeat;
+        }
+
+        /*.footer-subnav .footer-subnav-friend li{*/
+            /*margin-bottom: 2px;*/
+        /*}*/
+    </style>
+    <script>
+        ((function () {
+            var u = window.navigator.userAgent.toLowerCase();
+            var device = {};
+            var url = '/jibing/api/wappath';
+            var mLink=document.getElementById('toM').href;
+
+            device.mob = (function () {
+                return (u.indexOf("iphone") > -1 || u.indexOf("android") > -1);
+            })();
+
+            if (device.mob) {
+                location.href = mLink;
+            }
+        })());
+    </script>
+</head>
+<body class="header-line">
+
+	<!--.头部-->
+	<div class="wrap-box top-nav">
+  <div class="layout clr">
+    <div class="top-nav-left fll f0">
+      <a href="https://www.bohe.cn/" target="_blank" class="top-item">首页</a>
+      <a href="https://h.bohe.cn/" target="_blank" class="top-item ">医院</a>
+      <a href="https://www.bohe.cn/doctor/" target="_blank" class="top-item ">医生</a>
+      <a href="https://www.bohe.cn/dise/" target="_blank" class="top-item ">疾病</a>
+      <div class="top-item more-nav-btn">
+        视频<i class="right-icon"></i>
+        <div class="more-nav-list">
+          <a href="https://www.bohe.cn/video/" class="m-a " target="_blank">权威视频</a>
+          <a href="https://www.bohe.cn/media/" class="m-a " target="_blank">健康短视频</a>
+        </div>
+      </div>
+      <a href="https://www.bohe.cn/voice/" target="_blank" class="top-item ">语音</a>
+      <a href="https://www.bohe.cn/article/" target="_blank" class="top-item ">文章</a>
+      <div class="top-item more-nav-btn">
+        问答<i class="right-icon"></i>
+        <div class="more-nav-list">
+          <a href="https://www.bohe.cn/ask/" class="m-a on" target="_blank">权威问答</a>
+          <a href="https://www.bohe.cn/iask/" class="m-a " target="_blank">健康知道</a>
+        </div>
+      </div>
+      <a href="https://www.bohe.cn/news/" target="_blank" class="top-item ">头条</a>
+      <a href="https://www.bohe.cn/zx/" target="_blank" class="top-item">资讯</a>
+      <a href="https://www.bohe.cn/yao/" target="_blank" class="top-item">医药</a>
+
+
+
+
+    </div>
+    <div class="top-nav-right flr f0">
+      <a href="https://www.bohe.cn/hospital/" target="_blank" class="top-item tel common-rig">
+        <i class="ico hos_icon"></i>
+        <span>网上医院</span>
+      </a>
+
+      <a href="https://www.bohe.cn/sitemap.html" target="_blank" class="top-item tel f0 common-rig">
+        <i class="ico icon-map0"></i>
+        <span>网站地图</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="layout bh-header clr">
+  <div class="fll">
+    <a href="/" class="fll mr20 top_logo_common_a"><img src="https://static.bohe.cn/index/images/top_logo.png" class="top_logo_common" alt="博禾医生官网" title="博禾医生官网"></a>
+    <p class="fll pt5 web-title">
+              权威问答
+          </p>
+  </div>
+
+  <div class="function-entry flr">
+    <a href="https://www.bohe.cn/dise/" target="_blank" class="fun-item bg-dise">
+      <i class="ico icon-entry icon-dise"></i>
+      <span>查疾病</span>
+    </a>
+    <a href="https://www.bohe.cn/doctor/" target="_blank" class="fun-item bg-doctor">
+      <i class="ico icon-entry icon-doctor"></i>
+      <span>找医生</span>
+    </a>
+    <!--<a href="" target="_blank" class="fun-item bg-gh">
+      <i class="icon icon-entry icon-gh"></i>
+      <span>预约挂号</span>
+    </a>-->
+  </div>
+</div>
+
+	<!--/.头部-->
+
+
+<!-- bohev2/fe/templates/iask_pc/index.tpl -->
+    <div class="wrap mt-30 clr main-relative">
+        <div class="left-box fll">
+            <!-- 快速导航 -->
+            <div class="si nav-position">
+	<div class="si-main iask-sidenav">
+						<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-1 fll"></i>
+				<span class="fll si-list-title-word">内科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-4.html" target="_blank">呼吸内科</a>
+									<a href="https://www.bohe.cn/ask/list-5.html" target="_blank">消化内科</a>
+									<a href="https://www.bohe.cn/ask/list-6.html" target="_blank">心血管内科</a>
+									<a href="https://www.bohe.cn/ask/list-7.html" target="_blank">血液内科</a>
+									<a href="https://www.bohe.cn/ask/list-8.html" target="_blank">内分泌代谢科</a>
+									<a href="https://www.bohe.cn/ask/list-9.html" target="_blank">风湿免疫科</a>
+									<a href="https://www.bohe.cn/ask/list-10.html" target="_blank">神经内科</a>
+									<a href="https://www.bohe.cn/ask/list-11.html" target="_blank">肾内科</a>
+									<a href="https://www.bohe.cn/ask/list-88.html" target="_blank">老年病科</a>
+									<a href="https://www.bohe.cn/ask/list-225.html" target="_blank">普通内科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-2 fll"></i>
+				<span class="fll si-list-title-word">外科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-12.html" target="_blank">普通外科</a>
+									<a href="https://www.bohe.cn/ask/list-16.html" target="_blank">耳鼻喉科</a>
+									<a href="https://www.bohe.cn/ask/list-17.html" target="_blank">神经外科</a>
+									<a href="https://www.bohe.cn/ask/list-18.html" target="_blank">泌尿外科</a>
+									<a href="https://www.bohe.cn/ask/list-23.html" target="_blank">肝胆外科</a>
+									<a href="https://www.bohe.cn/ask/list-25.html" target="_blank">肛肠科</a>
+									<a href="https://www.bohe.cn/ask/list-26.html" target="_blank">心脏外科</a>
+									<a href="https://www.bohe.cn/ask/list-27.html" target="_blank">胸外科</a>
+									<a href="https://www.bohe.cn/ask/list-28.html" target="_blank">整形外科</a>
+									<a href="https://www.bohe.cn/ask/list-33.html" target="_blank">血管外科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-13 fll"></i>
+				<span class="fll si-list-title-word">骨科学</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-57.html" target="_blank">骨科</a>
+									<a href="https://www.bohe.cn/ask/list-59.html" target="_blank">脊柱外科</a>
+									<a href="https://www.bohe.cn/ask/list-94.html" target="_blank">骨关节科</a>
+									<a href="https://www.bohe.cn/ask/list-95.html" target="_blank">创伤骨科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-14 fll"></i>
+				<span class="fll si-list-title-word">眼科学</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-98.html" target="_blank">眼科</a>
+									<a href="https://www.bohe.cn/ask/list-99.html" target="_blank">白内障科</a>
+									<a href="https://www.bohe.cn/ask/list-100.html" target="_blank">青光眼科</a>
+									<a href="https://www.bohe.cn/ask/list-101.html" target="_blank">眼底病科</a>
+									<a href="https://www.bohe.cn/ask/list-104.html" target="_blank">眼外伤科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-15 fll"></i>
+				<span class="fll si-list-title-word">口腔科学</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-107.html" target="_blank">口腔科</a>
+									<a href="https://www.bohe.cn/ask/list-108.html" target="_blank">颌面外科</a>
+									<a href="https://www.bohe.cn/ask/list-109.html" target="_blank">正畸科</a>
+									<a href="https://www.bohe.cn/ask/list-111.html" target="_blank">牙体牙髓科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-19 fll"></i>
+				<span class="fll si-list-title-word">妇产科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-35.html" target="_blank">妇科</a>
+									<a href="https://www.bohe.cn/ask/list-36.html" target="_blank">产科</a>
+									<a href="https://www.bohe.cn/ask/list-37.html" target="_blank">生殖医学科</a>
+									<a href="https://www.bohe.cn/ask/list-191.html" target="_blank">计划生育科</a>
+									<a href="https://www.bohe.cn/ask/list-193.html" target="_blank">产前诊断科</a>
+									<a href="https://www.bohe.cn/ask/list-206.html" target="_blank">妇幼保健科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-20 fll"></i>
+				<span class="fll si-list-title-word">皮肤性病科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-42.html" target="_blank">皮肤科</a>
+									<a href="https://www.bohe.cn/ask/list-43.html" target="_blank">性病科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-38 fll"></i>
+				<span class="fll si-list-title-word">儿科学</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-39.html" target="_blank">儿科</a>
+									<a href="https://www.bohe.cn/ask/list-40.html" target="_blank">小儿外科</a>
+									<a href="https://www.bohe.cn/ask/list-41.html" target="_blank">新生儿科</a>
+									<a href="https://www.bohe.cn/ask/list-61.html" target="_blank">小儿呼吸科</a>
+									<a href="https://www.bohe.cn/ask/list-62.html" target="_blank">小儿皮肤科</a>
+									<a href="https://www.bohe.cn/ask/list-63.html" target="_blank">小儿消化科</a>
+									<a href="https://www.bohe.cn/ask/list-67.html" target="_blank">小儿精神科</a>
+									<a href="https://www.bohe.cn/ask/list-68.html" target="_blank">小儿神经外科</a>
+									<a href="https://www.bohe.cn/ask/list-69.html" target="_blank">小儿康复科</a>
+									<a href="https://www.bohe.cn/ask/list-71.html" target="_blank">小儿血液科</a>
+									<a href="https://www.bohe.cn/ask/list-73.html" target="_blank">小儿神经内科</a>
+									<a href="https://www.bohe.cn/ask/list-74.html" target="_blank">小儿泌尿外科</a>
+									<a href="https://www.bohe.cn/ask/list-75.html" target="_blank">小儿骨科</a>
+									<a href="https://www.bohe.cn/ask/list-76.html" target="_blank">小儿心内科</a>
+									<a href="https://www.bohe.cn/ask/list-77.html" target="_blank">小儿风湿免疫科</a>
+									<a href="https://www.bohe.cn/ask/list-78.html" target="_blank">小儿肾病科</a>
+									<a href="https://www.bohe.cn/ask/list-79.html" target="_blank">小儿感染内科</a>
+									<a href="https://www.bohe.cn/ask/list-87.html" target="_blank">小儿营养保健科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-44 fll"></i>
+				<span class="fll si-list-title-word">精神科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-45.html" target="_blank">精神病科</a>
+									<a href="https://www.bohe.cn/ask/list-46.html" target="_blank">心理咨询科</a>
+									<a href="https://www.bohe.cn/ask/list-47.html" target="_blank">成瘾医学科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-51 fll"></i>
+				<span class="fll si-list-title-word">中医科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-130.html" target="_blank">中医骨科</a>
+									<a href="https://www.bohe.cn/ask/list-131.html" target="_blank">针灸按摩科</a>
+									<a href="https://www.bohe.cn/ask/list-137.html" target="_blank">中医内科</a>
+									<a href="https://www.bohe.cn/ask/list-143.html" target="_blank">中医外科</a>
+									<a href="https://www.bohe.cn/ask/list-151.html" target="_blank">中医老年病科</a>
+									<a href="https://www.bohe.cn/ask/list-152.html" target="_blank">中西医结合科</a>
+									<a href="https://www.bohe.cn/ask/list-1007.html" target="_blank">治未病科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-53 fll"></i>
+				<span class="fll si-list-title-word">康复医学科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-189.html" target="_blank">理疗科</a>
+									<a href="https://www.bohe.cn/ask/list-214.html" target="_blank">康复科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-55 fll"></i>
+				<span class="fll si-list-title-word">肿瘤科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-119.html" target="_blank">肿瘤外科</a>
+									<a href="https://www.bohe.cn/ask/list-120.html" target="_blank">肿瘤内科</a>
+									<a href="https://www.bohe.cn/ask/list-121.html" target="_blank">放疗科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-56 fll"></i>
+				<span class="fll si-list-title-word">营养科学</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-215.html" target="_blank">营养科</a>
+									<a href="https://www.bohe.cn/ask/list-1002.html" target="_blank">饮食健康</a>
+									<a href="https://www.bohe.cn/ask/list-1003.html" target="_blank">食疗保健</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-125 fll"></i>
+				<span class="fll si-list-title-word">男科学</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-217.html" target="_blank">男科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-153 fll"></i>
+				<span class="fll si-list-title-word">感染性疾病科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-21.html" target="_blank">传染科</a>
+									<a href="https://www.bohe.cn/ask/list-154.html" target="_blank">肝病科</a>
+									<a href="https://www.bohe.cn/ask/list-155.html" target="_blank">结核病科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-160 fll"></i>
+				<span class="fll si-list-title-word">麻醉医学科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-161.html" target="_blank">麻醉科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-162 fll"></i>
+				<span class="fll si-list-title-word">医学影像科</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-164.html" target="_blank">核医学科</a>
+									<a href="https://www.bohe.cn/ask/list-165.html" target="_blank">放射科</a>
+									<a href="https://www.bohe.cn/ask/list-166.html" target="_blank">超声诊断科</a>
+							</div>
+		</div>
+	    		<div class="si-list">
+			<a class="si-list-title clr">
+				<i class="icon icon-sidenav icon-ill-169 fll"></i>
+				<span class="fll si-list-title-word">其它科室</span>
+				<i class="icon icon-nav-arrow flr"></i>
+			</a>
+			<div class="si-list-ills">
+													<a href="https://www.bohe.cn/ask/list-48.html" target="_blank">急诊科</a>
+									<a href="https://www.bohe.cn/ask/list-54.html" target="_blank">公共卫生与预防科</a>
+									<a href="https://www.bohe.cn/ask/list-158.html" target="_blank">运动医学科</a>
+									<a href="https://www.bohe.cn/ask/list-180.html" target="_blank">检验科</a>
+									<a href="https://www.bohe.cn/ask/list-1006.html" target="_blank">耳鼻喉科</a>
+									<a href="https://www.bohe.cn/ask/list-1008.html" target="_blank">药剂科</a>
+									<a href="https://www.bohe.cn/ask/list-1009.html" target="_blank">亚健康科</a>
+									<a href="https://www.bohe.cn/ask/list-1010.html" target="_blank">乳腺外科</a>
+							</div>
+		</div>
+	    	</div>
+</div>
+        </div>
+        <div class="main-box flr">
+            <div class="hot-component clr">
+                <div class="main fll">
+                    <!-- banner -->
+                    <div class="banner-box clr">
+    <div class="sl fll">
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                                                                <li>
+                            <a href="https://www.bohe.cn/ask/view/wei0h5llxmksol4.html" target="_blank" class="sl-list">
+                                <img src="https://file.bohe.cn/fhfile1/M00/4F/EA/o4YBAGMYL4CAKt3EAACjMqMMgfk133.png" alt="坐月子可以吃白萝卜吗" />
+                                <div class="sl-list-bottom clearfix">
+                                    <p class="sl-list-bottom-text fl">
+                                        <span class="vam dib">坐月子可以吃白萝卜吗</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.bohe.cn/ask/view/fvvp39st3ak3ys6.html" target="_blank" class="sl-list">
+                                <img src="https://file.bohe.cn/fhfile1/M00/07/53/oYYBAGIvCcGAWxegAADU-HYcpi0365.png" alt="小孩咳嗽怎么用药" />
+                                <div class="sl-list-bottom clearfix">
+                                    <p class="sl-list-bottom-text fl">
+                                        <span class="vam dib">小孩咳嗽怎么用药</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.bohe.cn/ask/view/ycynd3zvt3kgpcn.html" target="_blank" class="sl-list">
+                                <img src="https://file.bohe.cn/fhfile1/M00/4E/8E/o4YBAGIfL-uAWsEOAACx_ecuyMg03.jpeg" alt="静脉曲张做理疗可以好吗" />
+                                <div class="sl-list-bottom clearfix">
+                                    <p class="sl-list-bottom-text fl">
+                                        <span class="vam dib">静脉曲张做理疗可以好吗</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.bohe.cn/ask/view/75pko2c7ngk36rf.html" target="_blank" class="sl-list">
+                                <img src="https://file.bohe.cn/fhfile1/M00/07/4A/oYYBAGIXPGyAJWYZAACaaB9yeVc12.jpeg" alt="两肺纤维灶是什么意思" />
+                                <div class="sl-list-bottom clearfix">
+                                    <p class="sl-list-bottom-text fl">
+                                        <span class="vam dib">两肺纤维灶是什么意思</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="right-box flr">
+                    <!-- 热门文章 -->
+                    <div class="mb-20 hot-questions">
+    <h2 class="hot-questions-title clr">
+        <span class="com-title-txt fll">热门问题</span>
+    </h2>
+    <ul class="hot-questions-list">
+                            <li class="">
+                <a href="https://www.bohe.cn/ask/view/xeje3s6dpjkmdde.html" target="_blank">孩子排痰困难怎么办效果好</a>
+            </li>
+                    <li class="">
+                <a href="https://www.bohe.cn/ask/view/ugzb3s6dp9kp5n3.html" target="_blank">静心口服液效果怎么样</a>
+            </li>
+                    <li class="">
+                <a href="https://www.bohe.cn/ask/view/z2gy8pbq4ukmbvk.html" target="_blank">脱毛膏多久用一次</a>
+            </li>
+                    <li class="">
+                <a href="https://www.bohe.cn/ask/view/d70n7lhu8ok3vi1.html" target="_blank">艾普愈奎龙丹和汇仁肾宝哪个好？</a>
+            </li>
+                    <li class="">
+                <a href="https://www.bohe.cn/ask/view/8htnhs6dpukv958.html" target="_blank">男性阴茎疾病有什么</a>
+            </li>
+                    <li class="last">
+                <a href="https://www.bohe.cn/ask/view/d2jpyg7phwkmn77.html" target="_blank">胸口疼痛心率还加快什么引起的</a>
+            </li>
+            </ul>
+</div>                </div>
+            </div>
+            <div class="other-component">
+                <!-- 权威医生 -->
+                <div class="mt20 author-doctor">
+    <div class="author-doctor-title clr">
+        <p class="title fll">权威医生</p>
+        <p class="tip fll">在线医生一对一为您解答</p>
+        <p class="more flr"><a href="https://www.bohe.cn/doctor/" target="_blank" class="flr">查看全部医生</a></p>
+    </div>
+    <div class="author-doctor-list v2 clr">
+            <div class="bd">
+        <ul class="clr">
+                      <li class="fll ">
+              <a target="_blank" href="https://www.bohe.cn/doctor/586445.html">
+                <dl>
+                  <dt class="doctor-image">
+                    <img src="https://file.bohe.cn/fhfile1/M00/03/3F/o4YBAF6DOeiAaw_hAAG3KKNzOy8005.png" />
+                  </dt>
+                  <dd class="doctor-name">刘国莉</dd>
+                  <dd class="doctor-professional">
+                    <span>主任医师</span>
+                  </dd>
+                  <dd class="doctor-hospital">北京大学人民医院&nbsp;产科</dd>
+                  <dd class="doctor-goodat">擅长：围产保健高危妊娠产前诊断。</dd>
+                </dl>
+              </a>
+            </li>
+                      <li class="fll ">
+              <a target="_blank" href="https://www.bohe.cn/doctor/1217607.html">
+                <dl>
+                  <dt class="doctor-image">
+                    <img src="https://file.bohe.cn/fhfile1/M00/03/1F/o4YBAF5zKfWASx5dAAEUYdlemDw701.png" />
+                  </dt>
+                  <dd class="doctor-name">周丹</dd>
+                  <dd class="doctor-professional">
+                    <span>副主任医师</span>
+                  </dd>
+                  <dd class="doctor-hospital">北京医院&nbsp;妇产科</dd>
+                  <dd class="doctor-goodat">擅长：妇科肿瘤，妇科炎症，不孕症，计划生育</dd>
+                </dl>
+              </a>
+            </li>
+                      <li class="fll ">
+              <a target="_blank" href="https://www.bohe.cn/doctor/1214765.html">
+                <dl>
+                  <dt class="doctor-image">
+                    <img src="https://file.bohe.cn/fhfile1/M00/01/95/oYYBAF54USqAS926AAEel_nGt1I534.png" />
+                  </dt>
+                  <dd class="doctor-name">高君</dd>
+                  <dd class="doctor-professional">
+                    <span>副主任医师</span>
+                  </dd>
+                  <dd class="doctor-hospital">首都医科大学附属北京朝阳医院西院&nbsp;肝胆外科</dd>
+                  <dd class="doctor-goodat">擅长：肝肿瘤（包括原发性肝癌、肝血管瘤、肝转移...</dd>
+                </dl>
+              </a>
+            </li>
+                      <li class="fll last">
+              <a target="_blank" href="https://www.bohe.cn/doctor/618848.html">
+                <dl>
+                  <dt class="doctor-image">
+                    <img src="https://file.bohe.cn/fhfile1/M00/6A/6F/ooYBAFurQEiAOMFpAABn-FwC5k4232.jpg" />
+                  </dt>
+                  <dd class="doctor-name">朱瑜琪</dd>
+                  <dd class="doctor-professional">
+                    <span>主任医师</span>
+                  </dd>
+                  <dd class="doctor-hospital">中国中医科学院眼科医院&nbsp;骨科</dd>
+                  <dd class="doctor-goodat">擅长：四肢骨折脱位中医手法复位夹板固定治疗；运...</dd>
+                </dl>
+              </a>
+            </li>
+                  </ul>
+      </div>
+          </div>
+</div>                <!-- 常见问题 -->
+                <div class="mt20 iask-questions">
+    <div class="iask-questions-title clearfix">
+        <p class="title fll">常见问题</p>
+        <p class="tip fll">已为成千上万的用户解答健康问题</p>
+    </div>
+    <div class="iask-questions-list">
+      <ul class="iask-questions-list-ills clr">
+                          <li class="fll active ">
+            呼吸内科
+          </li>
+                  <li class="fll  ">
+            皮肤科
+          </li>
+                  <li class="fll  ">
+            传染科
+          </li>
+                  <li class="fll  ">
+            产科
+          </li>
+                  <li class="fll  ">
+            中医科
+          </li>
+                  <li class="fll  ">
+            肿瘤外科
+          </li>
+                  <li class="fll  ">
+            精神病科
+          </li>
+                  <li class="fll  last">
+            消化内科
+          </li>
+              </ul>
+      <div class="iask-questions-list-content">
+                  <ul class="active clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/srq7oa2kn7kjfxr.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">哮喘病能不能用药治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>哮喘的治疗，一般是通过口服药物或者喷雾类的药物进行缓解，起到缓解的作用，但是不能根治，这些药物主要通过抗炎作用使哮喘维持临床控制；缓解药物：是指按需使用的药物，这些药物通过迅速解除支气管痉挛从而缓解哮喘症状。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/5kav34trqxkt3l1.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">蚊香也可能会不会引发哮喘</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>一切事物都可能成为引发哮喘的过敏源。使用建议到医院检查过敏源，生活上注意不要接触。哮喘发病的遗传因素大于环境因素，如果父母都有哮喘，其子女患哮喘的几率可高达60％；如果父母中有一人患有哮喘，子女患哮喘的可能性为20％；如果父母都没有哮喘，子女患哮喘的可能性只有6％左右。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/3wo9ojsfpckrzax.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">胃不舒服一直打嗝怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>根据你胃不舒服打嗝的症状可能是胃炎导致的，建议到正规的医院对症治疗，胃病的治疗,遵医嘱进行用药时间较长,因为每天三次刺激胃酸分泌.所以治疗的关键是按疗程治疗,治好后,辛辣刺激食物要尽量少吃。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/z7bkdsbonlkmrc9.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">感冒用药方法</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>感冒的话建议你到正规医院使用消炎、清热解毒的药物治疗，感冒属于呼吸道合胞病毒等引起的一种上呼吸道感染，而上呼吸道感染包含急性咽炎、扁桃体炎、支气管炎等，如果抽烟的话，是会更严重的。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/7njs9khsh3knl3k.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">为什么洗澡手挠后背会出现红印</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>此种情况多考虑是皮肤过敏引起的，平时注意饮食应清淡易消化避免辛辣刺激性食物，可以多吃蔬菜水果，补充维生素，多饮水，注意天气的变化，勤增添衣物，防止着凉，勤开窗通风，注意个人卫生，防止细菌的繁殖。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/sbqu8fomtfkakyp.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">医缓解偏头痛有哪些方法</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>头疼的原因有很多，应及时到正规医院做相关检查，对症医治。头疼的防治应减少估计引发头疼的一切病因，包括避免头、脖子的软组织破损、感染、避免接触及摄取刺激性食品、避免情绪波动等，同时还应及时诊断及医治继发头疼的原发性疾病。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/u8juojsfeekx6x6.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">感冒咳嗽怎么办好</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>建议患者平时注意加强体育锻炼，提高自身的免疫力，经常感冒，说明自身的身体体质差，平时注意多喝水，多吃新鲜水果和蔬菜，补充维生素，加强营养的供给，但是饮食要清淡，不要吃辛辣的食物，室内要定时开窗通风，利于空前的流通。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/6dw6oz4dejk4xmp.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">肺炎一般需要输多少天液</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>现在还在发烧，考虑是炎症还存在，还需要继续进行治疗。肺炎抗生素治疗结合致病菌的类型,有无并发症等情况.抗生素用药时间应持续到体温正常后5-7天,临床症状消失后3天,支原体肺炎至少用药2-周,以免复发,建议你注意饮食调整，不要受凉避免感冒。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/vbq839paatkmm4k.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">宝宝老是流鼻涕如何解决好</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>宝宝老是流鼻涕，可能是上呼吸道感染引起的，你可以到宝宝去正规医院做血常规的检查，有可能是病毒感染导致的是呼吸道感染，要使用抗病毒的药物治疗比较好，平时要多给宝宝喝一些水比较好。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/9i0udia07qkpx5s.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">咳嗽怎么引起的</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>咳嗽的症状主要是因为咽炎所导致的，对于咽炎的患者，在日常中注意多喝水，保持体内的水分充足，不要吃辛辣刺激的食物，饮食要清淡，可以吃一些新鲜的蔬菜和水果，养成良好的生活习惯，保持室内适宜的温度和湿度，必要时可以使用消炎的药物治疗。若长期如此，需尽快就医。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more active">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-4.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/zepeyce7lvkmxrf.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">婴儿脸上的小毛毛多长时间能退</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>你家宝宝脸色这白色比较细的毛发属于胎毛的一种，这在宝宝生长发育的过程中会慢慢脱落的，一般在3个月左右有慢慢消失，与基因有关，但是都会脱落，所以不必太担心，刚出生的宝宝要注意保暖与喂养的问题，出月子后要记得自己和宝宝去医院做复查。为确定原因，最好到正规医院做检查，进行针对性的治疗。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/z7y18d2kvkki1kl.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">孩子查过敏源有必要吗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>孩子查过敏源是否有必要，这需要具体情况具体分析。如果孩子是偶尔出现过敏，比如明确是吃了某种药或某种食物后，出现了皮肤过敏或呼吸道过敏，而停止进食后就很少出现，此时则不一定要去查过敏源，只要注意避免即可。当部分孩子有特应性皮炎、过敏性的鼻炎和慢性荨麻疹的病史，经常出现过敏症状，且不明确是何种原因引起，则建议去查过敏源。虽说目前的过敏源检查并不完全，并不能包容所有的过敏物质，但总的来说部分常见的过敏源还是包含在内，其中有灰尘、花粉、鱼虾、鸡蛋、牛奶等。检查后可以明确是对哪些过敏，至少也能排除哪些不过敏，对后孩子疾病的预防和治疗有指导和帮助作用。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/nxhy8u4lybkjls6.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">不长痘的人脸上突然长痘怎么办</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>不长痘的人脸上突然长痘通常是因为不健康的饮食，经常吃辛辣刺激的食物导致的，还可能是由于压力过大导致精神紧张，引起内分泌失调造成的。患者出现了这种情况，可以到当地正规的医院就诊，在有经验的医生指导下，涂抹抗炎药物和抗生素药物治疗，也可以配合非甾体类抗炎药物治疗。日常要保持愉快的心情，多食用有营养的新鲜水果蔬菜，保证充足的睡眠。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/ztlr0rjbw8kpj1q.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">腮帮长痘痘是什么原因引起的</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>腮帮长痘痘是可能是吃了过于油腻的食物或者是辛辣的食物所导致，不排除是身体内部出现了内分泌紊乱所引起，如果皮肤上油脂过多，比如皮脂分泌比较旺盛，就会导致痘痘生长。在皮肤上长了痘痘后，需要及时使用祛痘消炎的膏药涂抹来治疗，可以起到去除效果。再用药物治疗期间一定要做好局部护理，饮食上要以清淡食物为主，不能熬夜，以免影响皮肤恢复。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/omnno8i2g3kzxga.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">寻常疣冷冻后起血泡胀痛怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>寻常疣冷冻后取血泡胀痛是很正常的情况，是因为患者皮肤组织受损导致的，患者不要用手去抓挠肌肤，可以使用碘伏给皮肤消毒。患者也可以使用外用抗生素药物治疗，和预防感染。患者要注意清淡饮食，不要抽烟和喝酒，要保持良好的清洁卫生习惯患者，才能更好的皮肤才会恢复健康。平时也要保证局部的清洁和干燥，也可以在局部涂抹一些红霉素软膏，可以帮助消除肿痛。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/0wdi0ifcfekg9sa.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">长痱子有什么办法根治</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>长痱子可以通过使用一些清热和利湿类的药物来达到改善的效果，也可以通过局部涂抹消炎和止痒类的药物来改善。出现长痱子的情况，可能是由于穿的衣服透气性不好导致的，也可能是由于没有做好局部的卫生护理工作引起的，另外也不排除是局部长期处于潮湿的状态导致的可能性。因此除了通过以上方式治疗外，一定要做好局部的清洁和护理工作，这样才可以促进恢复。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/c8i77d2sn8kym3s.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">晒斑雀斑可以做激光去除吗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>晒斑雀斑能做激光去除。激光是利用特定的光热能量照射在皮肤能穿透到皮肤深层，能破坏皮肤深层的黑色素，让黑色素排出体外，达到去除黄褐斑的效果，同时激光治疗是非常安全的，不会伤害到皮肤组织，还能让肌肤变得紧致光滑，需要到正规的医院，让经验丰富的医生操作激光手术。治疗后做好防晒措施，不能受到紫外线的照射，也不能食用辛辣刺激食物，避免影响皮肤恢复。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/03u23s6ud2km3qd.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">身上长小黑痣主要原因有哪些</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>身上长小黑痣通常有的黑痣是遗传先天性的，也有的一些黑痣是因为后天因素所造成的，后天造成的，一般是因为阳光暴晒或者是内分泌紊乱以及病毒感染所导致的小黑痣，小黑痣如果不及时治疗，很有可能出现扩散以及增多的情况，严重影响美观，如果不小心出现恶化的病情，很容易造成皮肤溃烂，出血，疼痛等症状。通常这种情况可以使用激光治疗或者采用手术切除治疗。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/8qc8dtkfmpkg6yq.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">上嘴角长斑是什么原因</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>上嘴角长斑很有可能是身体内缺乏了微量元素，比如缺乏维生素C，很容易引起上嘴角长斑，也可能是心理压力比较大，长时间熬夜休息不足，导致内分泌失调引起的斑点。也不排除是长时间的日晒，导致出现的斑点，平时如果化妆品使用不当，也有可能会引起黑色素沉着。或者是嘴唇外部皮肤受到了擦伤，造成的细菌感染，也有可能会引起上嘴角部位颜色比较重的情况。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/bv44h2c6wlkbplz.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">湿疹怎么才能治愈呢</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>湿疹可以在医生的指导下，口服抗组胺类的药物才能治愈。一般出现湿疹的情况，由于平时生活中接触到了一些过敏原，比如花粉或者尘螨以及柳絮等，从而诱发过敏造成的，通常会出现发红和瘙痒的症状，如果瘙痒的情况比较严重，需要外用止痒的药物来改善，在治疗期间需要严格做好护理措施。平时生活中保持局部清洁干燥，不要用手抓挠，以免损伤皮肤，引起感染的现象发生。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-42.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/82o5dxzhp2kwjsv.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">出现破伤风的症状是什么原因引起的</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>很因为患者的伤口在遭受感染之后，破伤风杆菌释放的毒素侵入神经系统，导致人的肌肉发生痉挛。因为破伤风杆菌是厌氧菌感染，毒素侵入人体之后诱发破伤风疾病。是很严重的，必要时是需要到正规医院遵循医嘱接种疫苗的。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/uskch58jcskrvr0.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">妊娠合并肺结核怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>妊娠合并肺结核主要是怀孕期间，免疫力低，结核菌感染造成的，这种情况需要及时治疗的，病情较轻的患者，不建议服用药物，避免影响胎儿发育，可以在生产后或者怀孕中期以后在进行治疗，怀孕满三个月才可以进行药物治疗，服用抗结核药物，但是这种药物可能会造成胎儿畸形，但是肺结核严重的话，不进行治疗，会造成缺氧，导致窒息，死胎等情况。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/cqcwyy6tnqkmk7w.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">下颌淋巴结肿大如何用药</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>下颌淋巴结肿大主要是由于炎症刺激造成的，或者与上火有一定的关系。建议你可以服用消炎药治疗，例如：头孢类、青霉素类的抗生素等。也可以吃点清热下火的药物治疗。尽量不要吃刺激性大的食物，可以适当的多吃点蔬菜、水果。病情严重的话，建议你最好去医院就诊。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/vbpn3ia6ickl9jb.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">肺结核药物治疗会不会好</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>需要及时的治疗，最好不要耽误治疗的最佳时间。肺结核是由结核分枝杆菌引发的肺部感染性疾病。是严重威胁健康的疾病。一般只有在机体免疫力下降时才发病。你要引起重视。一般抗结核半年初治患者会好转甚至治愈。建议是注意保持愉快的心情，积极的治疗，肺结核治疗以化学治疗为主，做到早期规律，全程适量的原则。你可以采取联合不同机制的抗结核药物，利用多种药物的交叉杀菌作用，不仅能提高杀菌灭菌效果，还能防止产生耐药性。你平时要注意保护肺部，尽量呼吸新鲜空气，效果不错的。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/zdhl7vnrvmkg400.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">如何预防高中学生肺结核</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>结核俗称“痨病”，是结核杆菌侵入体内引起的感染，是青年人容易发生的一种慢性和缓发的传染病。肺结核的主要传播途径是飞沫传染，开放性肺结核患者在咳嗽、喷嚏、大声谈笑时喷射出带菌的飞沫而传染给健康人。患者如随地吐痰，待痰液干燥后痰菌随灰尘在空气中飞播而传染。凡痰中找到结核杆菌的患者外出应戴口罩，不要对着别人面部讲话，不可随地吐痰，应吐在手帕或废纸内，集中消毒或用火焚烧灭菌。患者应养成分食制习惯，与患者共餐或食入被结核杆菌污染的食物可引起消化道感染。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/78lqyoczgxkbh8y.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">肺结核腹水容不容易治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>在临床上该疾病是前期肺结核没有尽早治疗引起的，需要抽取腹腔积液，化验明确诊断。积极的抗结核药物治疗，要遵循早期规律，全程联合适量用药，这样有利于结核感染恢复，能减少腹腔积液的量，早治疗，早恢复，治疗的时间根据疾病和治疗效果来决定的，要积极配合。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/uge2dp05pokxu9c.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">打破伤风针要注意的事项</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>首先是需要将自身的伤口消毒冲洗，把伤口弄干净，然后给予无菌包扎，按时换药，伤口比较大还需要给予抗感染治疗。当然还需要注射破伤风抗毒素一般在24小时以内注射就可以，要注意未恢复期间避免辛辣食物的摄入。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/dl7ey9pv8yky95r.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">肺结核咳血痰的原因有哪些</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>肺结核咳血痰这种情况说明病情已经很严重了，建议患者及时去正规的医院治疗。患者平时要注意补充优质足量的蛋白，以及补充含钙的食物，可以促进钙化，并且供给丰富的维生素，帮助机体恢复健康，按时休息，保证充足的睡眠。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/60pu31db15ka7tf.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">无症状的肺结核严不严重</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>无症状肺结核是不是严重这种情况是取决于病灶的具体情况。跟临床表现无关，虽然没有任何的临床表现和中毒症状，但是通过拍双肺的x光片、CT或者核磁共振，可以观察到结核的具体病灶，应及时到正规的医院治疗。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/7qgd063lwgkg1z4.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">水痘传染期是多久水痘期间要注意的事项</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>考虑是因为病毒感染引起的，需要抗病毒治疗，治疗后结痂，结痂期间依然具有传染性，所以要等彻底痊愈才能不传染。还有注意要避免抓挠，否则会留下疤痕，要注意卫生，勤洗澡换洗衣物，还有清淡饮食，避免辛辣的刺激的食物，多吃水果蔬菜，多喝水，提高自身抵抗力。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-21.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/rdniykh13kk4keq.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">人流有哪几种方法有哪些</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>人流的方法有两种，一种是普通人流，还有一种是无痛人流。无痛人流在手术之前会注射麻药，因此在手术的过程中是不会感到疼痛的。但是手术的费用比普通的人流要高一些。建议你可以根据自身的情况选择适合自己的人流方式。注意一定要选择正规的医院手术，以免出现大出血，以及感染等意外。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/05scoz4vcqk5gqx.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">备孕期间能不能养猫</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>正常来说在备孕期间的女性是不建议养宠物的，因为在备孕期间，男女双方应该调理身体，将身体达到最佳状态，这样才能够达到优生优育的。而宠物身上有很多寄生虫，对双方的身体是不健康的，也不利于以后胎儿的发育。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/ptkp7p0nvbkt7z6.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">老公吃药期间意外怀孕的孩子可以要</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>孩子是不是畸形儿的话还是要进行科学的检查，正常情况下是不能进行判断的，可以到医院进行唐氏筛查。高风险的话很有可能是唐氏儿，需要进行引产。平时生活中注意男性患有前列腺炎的话是不能同房的，容易导致交叉感染，还有影响男性疾病的恢复情况，要做好防护的措施。不想打掉的话需要等到4个月的时候，检查之后进行决定。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/z1dthqxk5hkokw7.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">怎么做刮宫手术</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>在做刮宫手术之前，先进行b超的检查，现在医学技术发达，有无痛的刮宫术，无痛刮宫手术室使用静脉麻醉。做清宫手术需要到正规医院进行。因为无痛清宫手术对经验是很有讲究的，要去正规医院进行手术，术后避免感染，要回来复查。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/gif2dp054ck08e7.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">验孕棒一条线不来月经这是什么情况</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>验孕棒这是没有怀孕，但是月经推迟的情况，日常注意休息，还没有来，原因有很多内分泌失调、压力过大都可引起推迟，一直没来，最好及时的就医检查再治疗。现在可以放松心情，等等看，月经推迟不超过一周就是正常的，有时候劳累，熬夜等等都会影响月经，日常注意合理饮食养成好的生活习惯。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/g7a23a23q1k6n8r.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">怎么做更年期吃点什么调理好该</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>更年期的妇女因为雌激素水平降低，身体会出现一些异常的变化，建议口服中成药来调理身体。平时注意积极的锻炼身体，良好的生活习惯。建议在医生的指导下合理用药，要养成好的生活习惯。有失眠等症状，可以联合营养神经的药物来治疗。自己要学会调节心态，保持心情愉悦，多多参加户外活动。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/bs9p9tlcl0kbjbm.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">先兆流产后要注意的事项</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>先兆流产后注意根据流血和腹痛的症状来判断病情的严重程度，有剧烈的腹痛或者有鲜血流出来，一般提示病情比较严重，要引起重视。患者病情较轻的时候，注意休息，及时观察，若是加重了病情，不要擅自用药，尽快就医。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/dtb274tollk5rrp.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">避孕带了节育环移位怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>对于节育环移位的情况，女性一定要重视，因为会导致出血，容易导致避孕失败、宫内感染、宫内出血、腹部不适等。建议取环。一般上环和取环都选择经后3-5天，因为这时操作可减少损伤内膜出血的可能性.出现了节育环移位的情况最明智的选择就是取环，而不是服用消炎药物，服消炎药物对环位置没有意义。建议月经干净3-7天取环，一月后没有炎症，可以考虑再安环。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/vahm7a23itk8gz6.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">剖腹产半个月后可以洗澡注意事项有什么</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>剖腹产才半个月，此时伤口还没有完全恢复，建议最好不要洗澡，以免造成伤口感染。身上出汗比较严重的话，可以用湿毛巾擦拭身体。近期一定要注意伤口卫生，要休息好，不要过度劳累。要多吃滋补的食物，有利于促进伤口恢复。此外，近期要保持良好的心态，不要有不良的情绪。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/i2me7gvd6xknxxt.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">女性顺产需要准备什么产后的护理方法有什么</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>女性要顺产，在产前一定要做好充足的准备，要准备好产妇以及新生儿的必需品，同时在产前一定要进行相关的检查。而在产后要注意观察出血的情况，提醒产妇们注意，一般在顺产后2小时内，阴道出血现象发生几率很高。因此一般在这段时间里产妇要留在病房内观察。产后有出血的情况，可以轻轻按摩肚子，以缓解不适。大量出血，要及时通知医生检查、处理。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-36.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/5xs1o409k3km0c7.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">肾炎病人可以吃三七粉吗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>肾炎患者可以吃三七粉，三七粉对于肾炎具有一定辅助作用，可以达到活血止痛，化瘀止血的作用，但决定服用三七粉时尽量不要盲目服用，需在医生嘱咐下根据自身的病情程度适当服用三七粉，避免造成不良反应。日常患者要以清淡饮食为主，忌辛辣刺激的食物，忌烟酒，多注意休息，适当运动增强抵抗力。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/quhsdhvmntkaz1v.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">乳腺结节能不能喝藏红花</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>有乳腺结节的患者是可以喝泡水的藏红花。 藏红花是一种中草药， 具有活血化瘀、凉血解毒、镇静安神等功效。 是妇科常用的药物之一。当患者出现乳房胀痛、刺痛时，可帮助患者症状消退，对患者身体大有益处。 但需要在医生指导下结合患者的实际情况应用，避免过量服用，可能导致不良反应。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/nc489tkpshk8tg9.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">输卵管上举能怀孕吗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>输卵管上举有可能会怀孕，怀孕几率会有所下降。在做输卵管检查的时候出现输卵管上举，在受孕几率上可能会有所降低，在卵泡破裂后不能正常排出体外，同时活跃度比较高的精子进入女性体内，也不能和优质的卵子结合，如果上举的症状不太严重，能使卵子正常排出，就不会影响到正常的受孕。还需要到医院做检查，在医生指导下做身体调理。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/psp8y2cfvgk8g3e.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">宫寒血瘀如何用药</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>宫寒血淤是因为脾肾阳虚导致，要调理：首先，药物可选艾附暖宫丸，血府逐瘀胶囊，桂枝茯苓丸以及附子理中丸，桂附地黄丸，肾宝片，清宫长春胶囊等药物调理，也可用鹿茸，杜仲，人参等泡酒喝。其次，患者平时也应该清淡饮食。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/3j5j0aohgkkpdnq.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">男性肝不好症状表现是什么</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>男性肝脏不好，早期出现消化道症状，主要为油腻食物，吃太多有腹胀消化不良，尤其是吃了油腻食物后表现更为显著。患者皮肤粗糙，活动后下肢容易腹痛，躺下后可能消失。有时刷牙会引起牙龈出血，患者一般有营养不良、乏力、消瘦、变脸等症状。颜色以深色为主，肝功能可能有一些异常，这些患者多有肝硬化的表现，若是进一步进展，可能引起脾肿大、全身水肿、肝肿大，甚至出现肝萎缩等症状。有的患者甚至出现胃肠道出血、肝性脑病等肝功能不全的临床表现。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/93q871alk0kmkav.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">女性补气补血调月经药物有哪些</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>气血不足引起月经病，若是是月经过多，可以口服乌鸡白凤丸；若是是月经量过少，用滋血汤可以补充血液、养血调经；若是是痛经，常用生鱼汤配合止痛药、理气止痛；若是月经后期，用大补元煎来健脾养血、补气调经；闭经，用人参养荣丸来补气养血和调经。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/8l5h8owv7gkah4u.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">艾灸对身体的好处是什么</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>艾灸对身体有非常多好处，主要有以下几点：
+1.艾灸可温通经络，驱散寒邪。如女性因寒引发的痛经，艾灸效果会非常明显。
+2.艾灸可补虚培本，回阳固脱。是古代中医急救术之一。
+3.艾灸可行气活血，消散瘀结。如对疮疡阴证，有独特的治疗效果。
+4.预防保健，益寿延年。艾灸可以激发人体正气，增强抗病能力。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/glkrojyonvkmrxd.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">心脏患者用热水泡脚都有哪些危害</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>心脏病的患者是可以用热水泡脚的。一般危害性并不是很大。只是对大部分的老年人而言，用热水泡脚时的温度一定不要太热，因为老年人对痛觉，热的敏感性会降低，若是太热的水是很有可能引起烫伤的，用热水泡脚，可以加速血液循环，日常用热水泡脚还是有必要的。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/2sj906xe18kmo1t.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">宫外孕是不是宫寒引起</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>宫外孕不是宫寒引起。宫外孕是妇科炎症导致的，比如输卵管炎会导致受精卵无法正常通过，不能顺利达到宫腔完成着床，就容易出现宫外孕。但宫寒会影响受孕，所以要及时调理，平时可以多喝些红糖姜水，具有散寒的效果，还能补气补血。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/fs9sdrjafhk81ve.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">人体受风寒症状表现是什么</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>风寒症状有怕冷，但添衣、加被后会缓解，口淡不渴，发热，周身无汗，颈部僵硬，疼，鼻塞，流清鼻涕，可能还伴有腹部疼，大便糖稀，呕吐，舌苔白。对于风寒导致上述症状，可以通过去祛风寒治疗，也可用生姜，葱白，大枣煮水。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-51.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/hc9ny0mca5kf2d2.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">缺铁的孩子有什么表现？</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>缺乏铁的孩子心智发育和运动发育指数均低于正常孩子，表现出反应迟钝、情绪波动、兴奋、躯体紧张度增加；语言能力和观察力落后，手指、腕、臂协调能力和灵活度较低等等</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/61gz958jxnkw01f.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">癌症后期治疗方法有哪些</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>既然已经确定到了癌症晚期，没有什么有效的治疗措施，可以考虑采取对症治疗。及时到正规的医院进行相关的治疗，在专业的医生的指导下进行相关的药物治疗还有科学的用药，积极配合治疗。因为已经到了癌症晚期，就没有必要手术了，以后不是特别理想，要做好思想准备。平时的时候要积极进行锻炼，保持良好的作息习惯还有不要熬夜。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/vl0qy1dbfwklnwm.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">癌细胞完全扩散怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>癌细胞已经全部扩散有可能是恶性肿瘤晚期，此时患者的治疗注意搜狐针对缓解疼痛为主，可以直接去正规医院的疼痛科就诊。对癌症患者疼痛还是有很大的帮助的，一般医生会根据患者的情况进行对症治疗，是可以缓解患者疼痛的病症的。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/w9ww74tnekkm65z.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">中后期食道癌有哪些治疗方法</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>中后期食道癌已经发生转移的情况，可能会危及生命，建议及早治疗，手术治疗以外，在癌细胞已经扩散时，患者是需要考虑接受进一步的放化疗治疗的。采用化疗与手术治疗相结合或与放疗、中医中药相结合的综合治疗。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/r1viy0k8dhkqvks.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">如何预防癌症</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>癌症的发生通常由于体内原癌基因与抑癌基因的突变有关，建议平时不要抽烟喝酒，不要过分的精神压力和情绪总是不好，平时要注意自己调节自己的心情，让自己保持舒畅，适当进行体育锻炼．平时不吃辛辣刺激的食物。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/iq7s0vnrb1k19vc.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">肝癌中药治疗需要注意什么怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>肝癌的治疗是有手术治疗，放疗化疗，还有保守治疗，肝癌处于晚期的话，扩散程度较高，手术治疗是没有明显的效果的，彻底治愈是不可能的，是需进行放疗或者化疗结合中药缓解病情，主要是需要中药成分的人参皂苷rg3，能够抗癌。注意生活中要保持良好的生活习惯，不要吃辛辣刺激的食物，不要喝酒吸烟等，不要紧张，积极配合治疗。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/dzwvdfoxy4kezzg.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">治疗宫颈癌能不能用中药</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>宫颈癌是很容易扩散的，建议早期到正规医院治疗，不要有太多的负面情绪，中医药治疗宫颈癌的不同阶段，主要强调辨证施治，结合手术、放疗可使患者远期疗效明显提高，降低宫颈癌复发率，建议根据病情治疗。不要盲目用药。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/875q8mg1pfkbw9d.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">预防乳腺癌吃什么食物比较好</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>你想要预防乳腺癌的话，建议你平时可以多吃点芒果、苹果等新鲜的蔬菜水果，能在一定程度上提高身体抵抗力，从而降低患有乳腺癌的几率。此外，建议你不要吃辛辣、刺激的食物。平时除了要注意饮食，建议你也要保持良好的心态，不要有太大的精神压力，要学会放松心情。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/9szy0kheypklakt.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">咳嗽呼吸困难肺癌怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>肺癌是会出现胸痛、胸闷、咳嗽、呼吸困难的症状的，建议你到正规医院治疗，肺癌治疗上多是以靶向治疗配合抗血管同时进行，一来减轻药物毒性刺激，缓解患者的身体情况，二来抗血管药物切断肿瘤细胞的营养源。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/w3xxhliy2lkmmo9.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">有早期乳腺癌症状的治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>有乳腺癌早期的症状，患者应该到正规医院做穿刺活检来明确，确定是乳腺癌后可以使用手术的办法来进行治疗，乳腺癌的患病主要是胸部长期受放射线照射、大量饮酒等因素所引起的，术后还应该积极的放化疗来控制疾病的发展。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-119.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/i2kz7jyv8vk5k6c.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">小儿麻痹症的后遗症能不能治好</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>无法保证治愈小儿麻痹症的后遗症，但是积极的功能锻炼会有很好的效果，早期应该积极进行锻炼。小儿麻痹后遗症是一种严重的致残性疾病,发病的结果造成患儿的肢体终生残疾.影响患儿的生活,生长和发育成熟,不仅造成小儿身体畸形还为小儿生活自理,学习以及进入社会造成了严重障碍,使患儿的身心各方面都受到了打击。掌握适当的训练尺度,数量和方法.训练量不够,无明显效果；而训练过量又可造成肢体的损害,比如：肌肉拉伤,关节肿胀,骨折脱位等等.所以必须掌握好这个尺度,训练量要适当。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/0qmgh4to30ks5r2.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">为什么精神恍惚</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>建议及时无正规的医院进行相关的检查，明确病因后对症治疗，另外可能是神经衰弱引起的，神经系统损伤之后所引起的，还有由于得了抑郁症的原因所引起的，日常生活中不要给自己太大的压力，尽量保持放松的心态，适当的进行户外运动等。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/90ly058jhqkaew5.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">精神不振头重身沉什么引起的</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>患者出现精神不振、头身沉重由于肝郁，湿气重，建议患者在医生的指导下使用疏肝健脾类的药物进行治疗。治疗期间要注意保持健康的生活方式，避免辛辣油腻刺激食物，不要熬夜，保持心情舒畅，这样才更有利于身体的恢复。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/wvbo94toh5kmmy1.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">精神心理疾病怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>精神心理疾病可能是自身的压力过大造成的，需要及时的治疗才行，它是由不同原因所致的大脑功能紊乱，实出表现为精神活动的异常，主要症状，有耳闻人语，猜疑，思维混乱，言语文字难以理解等现象，建议还是看看心理医生。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/3yo7dqxk73km0av.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">心情烦躁怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>以前活泼开朗，有说有笑，是宿舍的开心果，如今心情烦躁不安，感觉有自闭症倾向，不想说话，听到响声烦躁，多考虑是有抑郁症倾向，最好是先调整心态，尽早到正规医院进行检查确诊，确诊具体的疾病，再对症治疗。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/53zghgvdmukm5gr.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">脸色发黑精神不佳什么引起的</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>脾肾阳虚，湿气重，温煦运化无力引起了一系列症状，建议可以吃点温补脾肾的中药，桂枝附子等，健脾祛湿的中药调理一段时间，平时注意养成良好生活习惯，释放压力，不要过于紧张，注意休息。积极锻炼，注意健康清淡饮食。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/34nh7cy5aukus1u.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">女人生完孩子会不会性冷淡</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>女人生完孩子后，一般都会出现性冷淡现象，这个很多女人都会出现的，这个基本属于正常现象。女人生完孩子后，一般都会出现性冷淡现象，这个很多女人都会出现的，这个基本属于正常现象。影响夫妻间性生活质量的原因很多。一方面与精神心理因素有关，另一方面也与躯体因素有关。需要排除某些内分泌疾病。严重者需要及时就诊。意见建议：生孩子对女人身体的破坏是相当大的，一定要做好产后身体的调理，多吃有营养的东西。建议患者最好是先去附近的门诊或者是医院就诊，请医生诊断清楚病因后再做进一步治疗</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/zb4w0eqlnzko1aj.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">焦虑的缓解方法</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>焦虑情况的发生，主要与工作压力、学习压力、恋爱情况、经济压力等方面有关，才会导致情绪以及心理方面产生变化。焦虑情况的发生，主要与工作压力、学习压力、恋爱情况、经济压力等方面有关，才会导致情绪以及心理方面产生变化。缓解焦虑可通过服用药物、心理治疗以及森田治疗法，也就能使情绪上取得改善性效果。意见建议：要学会有效释放压力，可通过运动、听音乐或是参与户外活动的方式而进行解压。这个情况最好还是到医院做个检查，比较放心。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/i12my810v8kvdiz.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">女性神经衰弱有哪五大症状表现是什么</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>最常见的症状就是入睡困难，甚至多梦易惊；经常感到精力不足、萎靡不振、工作效率明显减退；患者常常处于兴奋状态；容易烦恼和激怒；常感到头昏眼花、月经不调等。意见建议：建议你多让妈妈做些体育锻炼，让妈妈多出去走走，适量补充大脑营养物质，补充维生素及微量元素，忌肥腻、辛辣刺激饮食，戒烟限酒。有条件的话还是去医院检查一下，不需要过度担心</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/dk9f3drhwokt47v.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">经常失眠多梦易醒怎么办</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>去泌尿外科看看前列腺，什么原因引起的夜尿，夜尿起来肯定影响睡眠。依据临床症状描述和既往病史，失眠和前列腺还有情绪相关。意见建议：控制一下夜尿次数。睡前不要进食刺激性食物。不要从事剧烈运动，尽量放轻松，不要乱想。保持好情绪。建议患者最好是先去附近的门诊或者是医院就诊，请医生诊断清楚病因后再做进一步治疗</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-45.html">查看更多问题</a>
+          </div>
+                            <ul class=" clr">
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/cfrsd0mkpmkzs25.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">吃胡椒能不能暖胃</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>胡椒是有助于暖胃的，胡椒大部分都生长于高温和长期湿润地区，性味辛热，因此温中散寒止痛的作用比较强。白胡椒的药用价值稍高一些，调味作用稍次。它的味道相对黑胡椒更为辛辣，因此散寒、健胃功能更强。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/96tf9mug5lkiy6m.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">乙肝患者脾脏会发生肿大是什么原因</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>当乙肝病毒活动时，在病毒的刺激下，免疫系统则要发动一切可能与感染的病毒作斗争。为了和入侵的敌人斗争，脾脏则要通过增生来补充免疫细胞，导致脾脏肿大。因此，乙肝病毒感染者做超声波检查时常有脾脏肿大的表现。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/tgu705l849knoji.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">一走路胃就痛是怎么回事</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>一走路胃就痛，主要原因是患有胃炎，胃炎一般是经常吃生冷食物、暴饮暴食、生活不规律刺激胃黏膜损伤引起的胃酸分泌过多所导致。胃炎的常见症状有胃酸、胃痛、烧心、消化不良等，需要在医生的指导下口服消炎和促进胃肠道消化的药物来治疗，比如奥美拉唑肠溶胶囊、健胃消食片等。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/iyik0owca2km6c5.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">总往上打气嗝是怎么回事</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>总是打气嗝可能是精神极度紧张、饮食因素或胃动力不足等原因所致。人在极度紧张时可能会造成胃肠功能紊乱，出现打气嗝的情况，另外，吃太多容易产生气体的食物，也会导致体内气体增多，出现打嗝的情况，还有就是胃动力不足，容易引发消化不良导致打嗝。可以通过在腹部热敷按摩的方式缓解，也可以遵医嘱服用多潘立酮或莫沙必利等增强胃动力的药物调理。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/tenddn8w7wkmjg0.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">孕妇吃火龙果能不能缓解便秘</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>孕妇吃火龙果可以缓解便秘，因为火龙果中含有丰富的膳食植物纤维素，可以促进肠蠕动，从而刺激排便减少便秘发生的频率，防止便秘的发生。孕妇到孕中后期很容易发生便秘，所以孕妇吃火龙果可以有效预防便秘。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/7y7b72cjrvko72p.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">便秘的人适不适合吃菠菜</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>菠菜味甘性凉，能润燥养肝，益肠胃，通便秘；菠菜可促进胃和胰腺分泌，增食欲，助消化；丰富的纤维素还能帮助肠道蠕动，有利排便。不过，菠菜草酸含量高，妨碍钙质吸收，应避免与豆腐、紫菜等高钙食物同吃，或在烹煮前轻汆，除去草酸。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/fld17hvfmgkcxse.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">胰腺炎挂水什么时候能好</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>胰腺炎挂水需要7天到10天左右，具体需要根据病情的严重程度来判断。症状比较轻微时及时选择正确方法治疗，大概在7天能够慢慢恢复，主要是由于胰腺组织出现的炎症性疾病，通常会表现出急性腹痛以及恶心呕吐，有些患者很有可能会出现发热，也有可能是细菌感染引起。选择正规医院做血液检查，比如血清淀粉酶以及血清脂肪酶。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/ut49h1adcvkm5ua.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">做胃镜后喉咙疼怎么治疗</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>做胃镜后喉咙疼要通过饮食方法缓解，必要时还要通过药物治疗。做胃镜后咽喉疼大多是由于导管对咽喉部位刺激引起的黏膜损伤，饮食上要多吃易消化的流食和半流食，不要吃生冷的食物和刺激性的食物，避免黏膜出血、出现溃烂等。如果黏膜损伤，还要在医生指导下服用消炎的药物和保护黏膜的药物治疗，比如奥美拉唑、阿莫西林、头孢克肟等。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list fll">
+                <a href="https://www.bohe.cn/ask/view/mxvj99sp3gkh983.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">慢性腹泻是什么原因引起有哪些</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>一，生活习惯所引起的，经常熬夜，晚上睡觉前喜欢洗冷水澡，都是会有可能引起慢性腹泻的。二，饮食不当所引起的，经常吃一些凉性的，刺激性的，油腻性的食物，那么也是容易出现慢性腹泻的。三，肠道炎症所引起的。</div>
+                </a>
+              </li>
+                          <li class="v2-ask-list flr">
+                <a href="https://www.bohe.cn/ask/view/ur4nd9s4g2k00uu.html" class="db" target="_blank">
+                  <h5 class="ask-list-title ellipsis">饭后饥饿感是什么原因引起的</h5>
+                  <div class="ask-list-des f14 wbwr Js_clamp"><span class="q">回答：</span>饭后饥饿感和幽门螺旋杆菌感染有关系。初步诊断是消化性溃疡。指导意见现在血糖是属于正常的，所以不是血糖造成的。如果情况严重，可在医生指导下口服药物进行治疗，如奥美拉唑等。日常要注意规律饮食，多吃一些易消化的食物，有利于改善症状。</div>
+                </a>
+              </li>
+                      </ul>
+                    <div class="iask-questions-more ">
+            <a target="_blank" href="https://www.bohe.cn/ask/list-5.html">查看更多问题</a>
+          </div>
+                        </div>
+    </div>
+</div>
+
+  <!--script>
+    $(function(){
+      var $departs = $('.iask-questions-list-ills');
+      var $lists = $('.iask-questions-list-content');
+      $departs.find('li').on('click', function() {
+        $lists.children().hide();
+        $(this).addClass('active').siblings().removeClass('active')
+        $lists.children(':eq(' + $(this).index() + ')').show();
+      })
+    })
+  </script-->
+            </div>
+        </div>
+    </div>
+
+
+	<!--.尾部-->
+    <div class="wrap-b footer-home mt30 doctor-common-footer">
+    <div class="wrap">
+        <div class="partner clr">
+            <span class="item-title-par fll">合作伙伴：</span>
+            <div class="partner-con fll">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/A5/ooYBAFvNP3eAbGPnAAEF2zmNsoY90.jpeg" alt="百度">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/A5/ooYBAFvNP6WAQ4vUAABEfJ6tko493.jpeg" alt="搜狗搜索">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/A5/o4YBAFvNP_WAc_NxAAHg03P5j2483.jpeg" alt="360搜索">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/9F/oYYBAFvNOTCAU4_vAADETKLQISE05.jpeg" alt="腾讯视频">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/A5/o4YBAFvNODOAa2tSAACza6S7Tik13.jpeg" alt="喜马拉雅FM">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/9F/oYYBAFvNN-yAAau6AAELfMAbaeY77.jpeg" alt="头条号">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/9F/oYYBAFvNQE-AIGnzAADKquyMz7E03.jpeg" alt="酷我音乐">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/9F/oYYBAFvNQNmAJ8VPAAFeCdcctRU94.jpeg" alt="中国中医科学院针灸医院">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/A5/ooYBAFvNQUCAH6ZtAACobJ-AFMw48.jpeg" alt="煤炭总医院">
+
+                    <img class="partner-link" src="https://file.bohe.cn/fhfile1/M00/6B/A5/o4YBAFvNQXKATLtFAADcpeWe4tQ98.jpeg" alt="北京朝阳医院">
+                            </div>
+        </div>
+                <div class="partner clr">
+            <span class="item-title-par fll">友情链接：</span>
+            <div class="partner-con fll">
+                                    <a href="https://dise.fh21.com.cn/hospital/" target="_blank" class="friend-link wbwr">大医名院</a>
+                                    <a href="https://www.bohe.cn/news/ " target="_blank" class="friend-link wbwr">健康新闻</a>
+                                    <a href="https://wapdise.fh21.com.cn/hospital_3479/" target="_blank" class="friend-link wbwr">珠海男科哪家好</a>
+                                    <a href="https://www.fh21.com" target="_blank" class="friend-link wbwr">复禾医药</a>
+                                    <a href="https://yao.bohe.cn/company/" target="_blank" class="friend-link wbwr">全国药企</a>
+                                    <a href="https://yao.bohe.cn/ask/" target="_blank" class="friend-link wbwr">药品问答</a>
+                                    <a href="https://yao.bohe.cn/article/" target="_blank" class="friend-link wbwr">药品科普</a>
+                                    <a href="https://m.bohe.cn/jkzl/" target="_blank" class="friend-link wbwr">健康诊疗</a>
+                                    <a href="https://yao.bohe.cn" target="_blank" class="friend-link wbwr">博禾医药</a>
+                                    <a href="https://www.bohe.cn/hospital/" target="_blank" class="friend-link wbwr">博禾医院</a>
+                                    <a href="https://www.fh21.com/company/" target="_blank" class="friend-link wbwr">全国药企</a>
+                                    <a href="https://www.fh21.com/ask/" target="_blank" class="friend-link wbwr">药品问答</a>
+                                    <a href="https://h.bohe.cn/" target="_blank" class="friend-link wbwr">博禾医院库</a>
+                                    <a href="https://www.fh21.com/article/" target="_blank" class="friend-link wbwr">医药科普</a>
+                                    <a href="https://www.fh21.com/news/" target="_blank" class="friend-link wbwr">医药资讯</a>
+                                    <a href="https://m.fh21.com.cn/guahao/" target="_blank" class="friend-link wbwr">挂号网</a>
+                                    <a href="https://dise.fh21.com.cn/" target="_blank" class="friend-link wbwr">疾病百科</a>
+                                    <a href="https://www.fh21.com/ask/YGzN0RgaGy.html" target="_blank" class="friend-link wbwr">双黄连口服液的成分与功效是什么</a>
+                                    <a href="https://www.fh21.com/ask/4JlL36RDJo.html" target="_blank" class="friend-link wbwr">鼻涕黄能吃感冒清热颗粒吗</a>
+                                    <a href="https://www.fh21.com/ask/v7kxok25Gl.html" target="_blank" class="friend-link wbwr">裸花紫珠片效果好吗</a>
+                                    <a href="https://www.fh21.com/map/yp/zysx/zhongliujibing/" target="_blank" class="friend-link wbwr">肿瘤疾病注意事项</a>
+                                    <a href="https://www.fh21.com/ask/B7YODwek83.html" target="_blank" class="friend-link wbwr">儿童吃小柴胡颗粒降温效果好吗</a>
+                                    <a href="https://www.fh21.com/map/yq/ypzx/hainan/" target="_blank" class="friend-link wbwr">海南药企资讯</a>
+                                    <a href="https://www.fh21.com/map/yp/sms/xiaohuaxitong/" target="_blank" class="friend-link wbwr">消化系统药品说明书</a>
+                                    <a href="https://www.fh21.com/ask/B7YODM6g83.html" target="_blank" class="friend-link wbwr">胆炎康胶囊抗病毒吗</a>
+                                    <a href="https://www.fh21.com/ask/38RyMz3QGb.html" target="_blank" class="friend-link wbwr">头孢地尼胶囊成人吃多少</a>
+                                    <a href="https://www.fh21.com/ask/x7X6q9qd82.html" target="_blank" class="friend-link wbwr">喝了急支糖浆能吃止疼片吗</a>
+                            </div>
+        </div>
+                <div class="footer-copy mt20 clr">
+            <a href="" class="footer-copy-link"><img src="https://static.bohe.cn/video/pc/home/images/pic-footer-logo.png" alt=""></a>
+            <div class="footer-copy-txt fll">
+                <p>
+                  <a href="https://www.fh21.com.cn/company/aboutUs.htm" target="_blank" class="nav-footer-link">关于我们</a>
+                  <a href="https://www.fh21.com.cn/company/contact.htm" target="_blank" class="nav-footer-link">联系我们</a>
+                  <a href="https://passport.fh21.com.cn/personal/feedback" target="_blank" class="nav-footer-link">意见反馈</a>
+                  <a href="https://www.fh21.com.cn/company/law.htm" target="_blank" class="nav-footer-link">服务条款</a>
+                  <span> | 举报邮箱：suggest@fh21.com</span>
+                </p>
+                <p>
+                  <span>特别声明：本站内容仅供参考，不作为诊断及医疗依据 | </span>
+                  <a class="nav-footer-link" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502039691" target="_blank">京公网安备 11010502039691号</a>
+                </p>
+                <p><a class="nav-footer-link" target="_blank" href="https://beian.miit.gov.cn/">网站备案号：京ICP备20026208号-1</a><a class="nav-footer-link" target="_blank" href="https://fhstatic.fh21.com.cn/fhwwwcms/icp.pdf">中国增值电信业务经营许可证：京B2-20202473</a></p>
+                <!-- t -->
+                <p><a class="nav-footer-link" target="_blank" href="https://fhstatic.fh21.com.cn/fhwwwcms/gbds.jpg">广播电视节目许可证</a>| Copyright 2005-2023 Fuhe All rights reserved | 复禾健康 版权所有</p>
+            </div>
+            <div class="footer-code">
+              <div class="footer-code-w">
+                <p class="footer-code-pic"><img src="https://static.bohe.cn/video/pc/home/images/pic-code.jpg" alt=""></p>
+                <p class="footer-code-txt">移动版</p>
+              </div>
+              <div class="footer-code-w">
+                <p class="footer-code-pic"><img src="https://static.bohe.cn/video/pc/home/images/pic-code-g.jpg" alt=""></p>
+                <p class="footer-code-txt">微信公众号</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<!--/.尾部-->
+
+
+    <script src="https://static.bohe.cn/js/common/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            jQuery(".slideBox").slide({
+                mainCell:".bd ul",
+                titCell: ".hd ul",
+                effect:"leftLoop",
+                autoPlay:true,
+                autoPage: "<li></li>",
+                vis: 3
+            });
+
+            jQuery(".author-doctor-list").slide({
+                mainCell: ".bd ul",
+                effect: "leftLoop",
+                autoPlay: true,
+                autoPage: true,
+                scroll: 4,
+                vis: 5});
+
+            $('.item-title').on('click',function(){
+                $(this).addClass('item-title-current').siblings().removeClass('item-title-current');
+                $('.video-main-list').eq($(this).index()).addClass('video-main-list-show').siblings().removeClass('video-main-list-show');
+            });
+
+            $('.iask-questions-list .iask-questions-list-ills').on('click', 'li', function(ev) {
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.iask-questions-list .iask-questions-list-content > ul').removeClass('active').eq($(this).index()).addClass('active');
+                $('.iask-questions-list .iask-questions-list-content > .iask-questions-more').removeClass('active').eq($(this).index()).addClass('active');
+            })
+        });
+    </script>
+
+    <script>
+        // 文字显示两行
+    clamp()
+    function clamp(){
+        $('.Js_clamp').each(function(i, e){
+            $clamp(e, {clamp: 2});
+            $(e).removeClass('Js_clamp');
+        });
+    }
+        // 全站统计代码
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?7b5243e28e06e5637ee9bdfbc0f4e734";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+</body>
+</html>

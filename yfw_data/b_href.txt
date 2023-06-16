@@ -1,0 +1,16 @@
+/yongyao/changwei/ => 胃肠用药
+/yongyao/fuke/ => 妇科用药
+/yongyao/huxi/ => 呼吸系统
+/yongyao/nanke/ => 男科用药
+/yongyao/xinnao/ => 心脑血管
+/yongyao/erke/ => 儿科用药
+/yongyao/jiating/ => 家庭常用
+/yongyao/shenjing/ => 神经系统
+/yongyao/fengshi/ => 风湿骨科
+/yongyao/ganbing/ => 肝胆用药
+/yongyao/zhongliu/ => 抗肿瘤药
+/yongyao/yingyang/ => 营养滋补
+/yongyao/pifu/ => 皮肤科药
+/yongyao/minzu/ => 民族用药
+/yongyao/wuguan/ => 五官科药
+/yongyao/neifen/ => 内分泌药

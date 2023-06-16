@@ -1,7 +1,5 @@
 import datetime
 import json
-import os
-import argparse
 import sys
 import time
 import subprocess
@@ -41,6 +39,7 @@ class Run:
         # 接管chrome浏览器
         options.add_experimental_option("debuggerAddress", CHORME_URL)
         self.driver = webdriver.Chrome(options=options)
+
         time.sleep(2)
         # 调整窗口大小
         self.driver.set_window_position(350, 0)

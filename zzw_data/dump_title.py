@@ -1,0 +1,1 @@
+# <div class="ggad_336">(.*?)<div class="ggad_728">

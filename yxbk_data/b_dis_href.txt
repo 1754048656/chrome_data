@@ -1,0 +1,14 @@
+全身 => https://www.yixue.com/全身疾病查询
+皮肤 => https://www.yixue.com/皮肤科疾病
+头部 => https://www.yixue.com/头部疾病查询
+颈部 => https://www.yixue.com/颈部疾病查询
+胸部 => https://www.yixue.com/胸部疾病查询
+背部 => https://www.yixue.com/背部疾病查询
+腹部 => https://www.yixue.com/腹部疾病查询
+腰部 => https://www.yixue.com/腰部疾病查询
+臀部 => https://www.yixue.com/臀部疾病查询
+盆腔 => https://www.yixue.com/盆腔疾病查询
+妇科 => https://www.yixue.com/妇科疾病
+男科 => https://www.yixue.com/男科疾病
+上肢 => https://www.yixue.com/上肢疾病查询
+下肢 => https://www.yixue.com/下肢疾病查询

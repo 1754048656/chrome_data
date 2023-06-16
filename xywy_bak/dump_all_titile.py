@@ -4,7 +4,7 @@ import time
 import requests
 import re
 import random
-import uaList
+import ua_list
 
 # 去重
 class DumpAllTitle:

@@ -44,14 +44,17 @@ class Run:
         # os.system('' + s1)
         self.chrome_process = subprocess.Popen(s1, shell=True)
         # self.chrome_process = subprocess.Popen(s1, creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+
         # 这种方式会被知乎检测到
         # self.driver = webdriver.Chrome(executable_path='chromedriver.exe')
-
 
         # 创建浏览器对象
         options = webdriver.ChromeOptions()
         # 接管chrome浏览器
         options.add_experimental_option("debuggerAddress", CHORME_URL)
+
+
         self.driver = webdriver.Chrome(options=options)
         time.sleep(2)
         # 调整窗口大小
