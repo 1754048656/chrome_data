@@ -48,11 +48,27 @@ class DumpTitle:
                 self.getTwoDepartmentList(dis_url, department, disease)
                 time.sleep(2)
 
-    def getTwoDepartmentList(self, tmp_url, department, disease):
+                for p in range(1, 11):
+                    # print(p)
+                    # two_url = two_de_url.split('.html')[0] + '-' + str(p) + '.html'
+                    print(two_url)
+                    res_info = ''
+                    try:
+                        res_info = self.getTwoDepartmentList(dis_url, department, disease)
+                    except Exception as e:
+                        print(e)
+                        break
+                    if '-3' in res_info:
+                        self.tmp_num = 0
+                        print('----next----')
+                        break
+                    time.sleep(2)
+
+    def getTwoDepartmentList(self, dis_url, department, disease):
         self.headers['User-Agent'] = uaList.list[random.randint(0, len(uaList.list) - 1)]
         print('User-Agent => ' + self.headers['User-Agent'])
 
-        response = requests.get(tmp_url, cookies=self.cookies, headers=self.headers)
+        response = requests.get(dis_url, cookies=self.cookies, headers=self.headers)
         res_text = response.text
         # print(res_text)
         # time.sleep(5)

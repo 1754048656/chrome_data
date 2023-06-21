@@ -66,68 +66,34 @@ class Addons:
         #             print(excerpt)
         #             print('-------')
 
+
+        #问题
         if '/api/v5.1/topics/' in flow.request.url:
-            if flow.response.content:
-                print(flow.request.url)
-                res_json = flow.response.json()
-                data_list = res_json['data']
-                for data_list_item in data_list:
-
-                    try:
-                        id = data_list_item['target']['id']
-                        url = data_list_item['target']['url']
-                        url = url.split('com/')[1]
-                        question_id = data_list_item['target']['question']['id']
-                    except Exception as e:
-                        print('--')
-                        print('Exception res => ' + json.dumps(res_json, ensure_ascii=False))
-                        break
-                    url = 'https://www.zhihu.com/question/' + str(question_id) + '/' + url
-                    url = url.replace('answers', 'answer')
-                    question_title = data_list_item['target']['question']['title']
-                    print(url)
-                    print(question_title)
-                    # print('--------------')
-
-                    json_line = {}
-                    json_line['topic'] = self.r.get('current_name')
-                    json_line['question_title'] = question_title
-                    json_line['url'] = url
-
-                    json_text = json.dumps(json_line, ensure_ascii=False)
-                    print(json_text)
-                    print('self.current_num => ' + str(self.r.get('current_num')))
-                    current_num = self.r.get('current_num')
-                    current_num = int(current_num)
-                    if current_num >= 820:
-                        self.r.set('to_next', 'T')
-                        self.tmpList = []
-                        break
-                    if url in self.tmpList:
-                        print('----- 重复了 -----')
-                        continue
-
-                    current_num = int(current_num) + 1
-                    self.r.set('current_num', current_num)
-
-                    self.tmpList.append(url)
-                    self.write2File('zhihu_topic/topics.txt', json_text + '\n')
-            pass
+            try:
+                self.getTopics(flow)
+            except Exception as e:
+                print('--- 整体 ---')
+                print(e)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        #拿到所有话题
+        #https://www.zhihu.com/node/TopicsPlazzaListV2
+        # if 'TopicsPlazzaList' in flow.request.url:
+        #     if flow.response.content:
+        #         print(flow.request.url)
+        #         res_json = flow.response.json()
+        #         print('=========')
+        #         topic_list = res_json['msg']
+        #         for topic_list_item in topic_list:
+        #             # print(topic_list_item)
+        #             # href="/topic/19551387">
+        #             topic_url = re.compile('href="/topic/(.*?)">', re.S).findall(topic_list_item)[0]
+        #             print(topic_url)
+        #             # <strong>生活方式</strong>
+        #             topic_name = re.compile('<strong>(.*?)</strong>', re.S).findall(topic_list_item)[0]
+        #             print(topic_name)
+        #             print('========================')
+        #             # self.write2File('topics.txt', topic_name + ' => ' + topic_url + '\n')
 
 
 
@@ -179,6 +145,62 @@ class Addons:
     def write2File(self, file_name, text):
         file = open(file_name, 'a')
         file.write(text)
+
+    def getTopics(self, flow):
+        if flow.response.content:
+            print(flow.request.url)
+            res_json = flow.response.json()
+            data_list = res_json['data']
+
+            u_tmp_num = 0
+            for data_list_item in data_list:
+                # ,"id":
+                id = data_list_item['target']['id']
+
+                url = data_list_item['target']['url']
+                url = url.split('com/')[1]
+                try:
+                    question_id = data_list_item['target']['question']['id']
+                except Exception as e:
+                    # question_id = data_list_item['target']['question']['id']
+                    print('--- to continue ---')
+                    # print('Exception res => ' + json.dumps(res_json, ensure_ascii=False))
+                    continue
+
+                print('u_tmp_num => ' + str(u_tmp_num))
+                u_tmp_num = u_tmp_num + 1
+                url = 'https://www.zhihu.com/question/' + str(question_id) + '/' + url
+                url = url.replace('answers', 'answer')
+                question_title = data_list_item['target']['question']['title']
+                print(url)
+                print(question_title)
+                # print('--------------')
+
+                json_line = {}
+                json_line['tmp_first_topic'] = self.r.get('tmp_first_topic')
+                json_line['topic'] = self.r.get('current_name')
+                json_line['question_title'] = question_title
+                json_line['url'] = url
+
+                json_text = json.dumps(json_line, ensure_ascii=False)
+                print(json_text)
+                print('self.current_num => ' + str(self.r.get('current_num')))
+                current_num = self.r.get('current_num')
+                current_num = int(current_num)
+                if current_num >= 20000:
+                    self.r.set('to_next', 'T')
+                    self.tmpList = []
+                    break
+                if url in self.tmpList:
+                    print('----- 重复了 -----')
+                    continue
+
+                current_num = int(current_num) + 1
+                self.r.set('current_num', current_num)
+
+                self.tmpList.append(url)
+                self.write2File('topics_question.txt', json_text + '\n')
+        pass
 
 
 addons = [
